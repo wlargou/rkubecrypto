@@ -1,0 +1,99 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:86d0a7ff-eb46-4e89-bca4-8362a63afa4f",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2024-08-22T12:07:06Z",
+    "tools" : {
+      "services" : [
+        {
+          "provider" : {
+            "name" : "IBM"
+          },
+          "name" : "Sonar Cryptography Plugin",
+          "version" : "1.2.0"
+        }
+      ]
+    }
+  },
+  "components" : [
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "d20ceae5-972b-44c0-ad10-b7d0d42a1008",
+      "name" : "sha-256",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "line" : 18,
+            "offset" : 17,
+            "additionalContext" : "java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;",
+            "location" : "src/main/java/com/example/crypto/CryptoApplication.java"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "256",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "2.16.840.1.101.3.4.2.1"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "bad2b88d-f516-41fc-b915-0803a64802a5",
+      "name" : "sha-1",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "line" : 40,
+            "offset" : 32,
+            "additionalContext" : "java.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;",
+            "location" : "src/main/java/com/example/crypto/CryptoApplication.java"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "hash",
+          "parameterSetIdentifier" : "512",
+          "cryptoFunctions" : [
+            "digest"
+          ]
+        },
+        "oid" : "1.3.14.3.2.26"
+      }
+    },
+    {
+      "type" : "cryptographic-asset",
+      "bom-ref" : "e1548908-a8ef-45d7-be28-d44ec34348d6",
+      "name" : "ec",
+      "evidence" : {
+        "occurrences" : [
+          {
+            "line" : 34,
+            "offset" : 9,
+            "additionalContext" : "java.security.KeyFactory#getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;",
+            "location" : "src/main/java/com/example/crypto/CryptoApplication.java"
+          }
+        ]
+      },
+      "cryptoProperties" : {
+        "assetType" : "algorithm",
+        "algorithmProperties" : {
+          "primitive" : "other",
+          "cryptoFunctions" : [
+            "keygen"
+          ]
+        }
+      }
+    }
+  ],
+  "dependencies" : [ ]
+}
